@@ -194,6 +194,8 @@ footer {
     font-weight: bold;
     margin-top: 20px;
 }
+
+/* Foto Hi Baby */
 .hi-images {
     position: relative;
     width: 500px;
@@ -202,171 +204,44 @@ footer {
 .hi-images img {
     position: absolute;
     width: 200px;
-    height: auto; /* biar tidak gepeng */
+    height: auto;
     border: 6px solid #fff;
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     padding: 5px;
     background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.hi-images img:nth-child(1) {
-    top: 20px; left: 0; transform: rotate(-5deg); z-index: 1;
-}
-.hi-images img:nth-child(2) {
-    top: 0; left: 150px; transform: rotate(3deg); z-index: 2;
-}
-.hi-images img:nth-child(3) {
-    top: 20px; left: 300px; transform: rotate(-4deg); z-index: 1;
-}
+.hi-images img:nth-child(1) { top: 20px; left: 0; transform: rotate(-5deg); z-index: 1; }
+.hi-images img:nth-child(2) { top: 0; left: 150px; transform: rotate(3deg); z-index: 2; }
+.hi-images img:nth-child(3) { top: 20px; left: 300px; transform: rotate(-4deg); z-index: 1; }
 .hi-images img:hover {
     transform: scale(1.05) rotate(0deg);
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     z-index: 3;
 }
 
-/* FAVORITE PAGE */
-.favorite-logo {
-    text-align: center;
-    background-color: #fff;
-    padding: 40px 0 20px 0;
-}
-.favorite-logo img {
-    height: 110px;
-    display: block;
-    margin: 0 auto;
-}
-.favorite-logo h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-    color: #7b0f17;
-    margin-top: 10px;
-}
-.favorite-photos {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    gap: 0;
-}
-.favorite-photos img {
-    width: 50%;
-    height: auto;      /* biar proporsional */
-    object-fit: cover;
-    border-radius: 0;
-    display: block;
-}
-
-/* STORY PAGE */
-.story-header {
-    text-align: center;
-    padding: 40px 20px;
-}
-.story-header img {
-    height: 100px;
-    margin-bottom: 10px;
-    max-width: 100%;
-}
-.story-header h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 48px;
-    margin: 10px 0;
-    color: #7b0f17;
-}
-.story-header p {
-    font-size: 16px;
-    font-style: italic;
-    color: #7b0f17;
-}
-.story-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 20px;
-    margin: 0 auto 40px;
-    max-width: 1200px;
-}
-.story-card {
-    background: #fff;
-    border: 2px solid #7b0f17;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.story-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.story-card h3 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #7b0f17;
-}
-.story-card p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    .story-header h2 { font-size: 40px; }
-}
-
+/* ======== RESPONSIVE FIX UNTUK HP ======== */
 @media (max-width: 768px) {
-    /* Navbar */
-    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-    nav a { margin: 5px 10px; font-size: 12px; }
-
-    /* Search bar */
-    .search-bar { flex-direction: column; text-align: center; max-width: 95%; }
-
-    /* Main section */
-    .main-section { flex-direction: column; gap: 20px; align-items: center; }
-    .side-img img {
-        max-width: 90%;
-        height: auto; /* biar tidak gepeng */
-    }
-    .content { margin-top: 0; }
-
-    /* Hi Baby */
     .hi-baby { flex-direction: column; padding: 20px; }
     .hi-text { width: 100%; }
+
     .hi-images {
         width: 100%;
         height: auto;
         margin-top: 20px;
-        display: flex;
+        display: flex;          /* ubah jadi flex */
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
         position: relative;
     }
     .hi-images img {
-        position: relative;
+        position: relative;     /* reset absolute */
         width: auto;
-        max-width: 45%;
-        height: auto; /* proporsional */
-        left: 0; top: 0;
-        transform: none;
+        max-width: 45%;         /* biar 2 foto muat sejajar */
+        height: auto;
+        transform: none;        /* reset rotasi */
     }
-
-    /* Favorite */
-    .favorite-photos { 
-        flex-direction: column; 
-        align-items: center;
-        gap: 15px;
-    }
-    .favorite-photos img {
-        width: auto;
-        max-width: 95%; /* biar masuk layar */
-        height: auto;   /* proporsional */
-    }
-
-    /* Story */
-    .story-header img { height: 70px; }
-    .story-header h2 { font-size: 30px; }
-    .story-header p { font-size: 14px; }
-    .story-container { grid-template-columns: 1fr; gap: 15px; }
-    .story-card { width: 100%; }
 }
+
+
