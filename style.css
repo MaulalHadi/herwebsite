@@ -331,29 +331,25 @@ footer {
 
     .hi-images {
         width: 100%;
-        height: auto;
         margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 kolom rapih */
+        gap: 15px;
         position: static;
+        height: auto;
     }
     .hi-images img {
-        position: static;
-        transform: none;
-        flex: 1 1 calc(50% - 20px); /* max 2 kolom */
-        max-width: calc(50% - 20px);
+        position: static;   /* hilangkan absolute */
+        transform: none;    /* hilangkan rotasi */
+        width: 100%;
         height: auto;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 }
 
-/* Supaya HP sangat kecil (<=480px) jadi 1 kolom */
+/* HP sangat kecil (<=480px) jadi 1 kolom */
 @media (max-width: 480px) {
-    .hi-images img {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .hi-images {
+        grid-template-columns: 1fr;
     }
 }
