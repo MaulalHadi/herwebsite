@@ -337,34 +337,23 @@ footer {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px;
         position: static;
     }
     .hi-images img {
         position: static;
         transform: none;
-        width: 100%;
-        max-width: 250px;
+        flex: 1 1 calc(50% - 20px); /* max 2 kolom */
+        max-width: calc(50% - 20px);
         height: auto;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
+}
 
-    /* Favorite */
-    .favorite-photos { 
-        flex-direction: column; 
-        align-items: center;
-        gap: 15px;
+/* Supaya HP sangat kecil (<=480px) jadi 1 kolom */
+@media (max-width: 480px) {
+    .hi-images img {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
-    .favorite-photos img {
-        width: auto;
-        max-width: 95%;
-        height: auto;
-    }
-
-    /* Story */
-    .story-header img { height: 70px; }
-    .story-header h2 { font-size: 30px; }
-    .story-header p { font-size: 14px; }
-    .story-container { grid-template-columns: 1fr; gap: 15px; }
-    .story-card { width: 100%; }
 }
