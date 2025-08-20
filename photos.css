@@ -29,6 +29,7 @@ nav a:hover {
 }
 .logo img {
     height: 80px;
+    max-width: 100%;
 }
 .logo h1 {
     font-family: 'Great Vibes', cursive;
@@ -39,7 +40,7 @@ nav a:hover {
 /* Grid Foto */
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom di desktop */
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom desktop */
     gap: 20px;
     max-width: 1000px;
     margin: 40px auto;
@@ -55,13 +56,6 @@ nav a:hover {
     aspect-ratio: 3/4;
     object-fit: cover;
     border-radius: 6px;
-}
-
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr); /* jadi 2 kolom */
-    }
 }
 
 /* Teks Romantis */
@@ -96,20 +90,67 @@ footer {
     position: relative;
     width: 100%;
 }
-
-/* Track berjalan */
 .marquee__track {
     display: inline-block;
     white-space: nowrap;
     will-change: transform;
     animation: marquee 15s linear infinite;
 }
-
-/* Animasi jalan */
 @keyframes marquee {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
 
+/* ====================== */
+/*      RESPONSIVE        */
+/* ====================== */
 
+/* Tablet */
+@media (max-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    }
+}
 
+/* HP sedang */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 12px;
+        font-size: 14px;
+    }
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+        gap: 15px;
+    }
+    .logo h1 {
+        font-size: 32px;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    nav a {
+        margin: 5px 10px;
+        font-size: 12px;
+    }
+    .photo-grid {
+        grid-template-columns: 1fr; /* 1 kolom */
+        gap: 12px;
+    }
+    .logo img {
+        height: 60px;
+    }
+    .logo h1 {
+        font-size: 26px;
+    }
+    .love-text {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
