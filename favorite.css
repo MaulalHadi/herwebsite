@@ -1,0 +1,95 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #7b0f17;
+}
+
+/* Navbar */
+nav {
+    background-color: #7b0f17;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+/* Logo Favorite */
+.favorite-logo {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 0 20px 0;
+}
+.favorite-logo img {
+    height: 110px;
+    display: block;
+    margin: 0 auto;
+}
+.favorite-logo h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    color: #7b0f17;
+    margin-top: 10px;
+}
+
+/* Foto Favorite sejajar */
+.favorite-photos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0; /* supaya nempel persis */
+}
+.favorite-photos img {
+    width: 50%;          /* kiri kanan full setengah */
+    height: auto;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+/* ===================== */
+/*   RESPONSIVE DESIGN   */
+/* ===================== */
+@media (max-width: 768px) {
+    /* Navbar responsif */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    nav a {
+        margin: 5px 10px;
+        font-size: 12px;
+    }
+
+    /* Foto jadi stack */
+    .favorite-photos {
+        flex-direction: column;
+    }
+    .favorite-photos img {
+        width: 100%; /* foto jadi full */
+    }
+
+    /* Logo lebih kecil */
+    .favorite-logo img {
+        height: 80px;
+    }
+    .favorite-logo h2 {
+        font-size: 30px;
+    }
+}

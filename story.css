@@ -1,0 +1,126 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #7b0f17;
+}
+
+/* Navbar */
+nav {
+    background-color: #7b0f17;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+/* Header Story */
+.story-header {
+    text-align: center;
+    padding: 40px 20px;
+}
+.story-header img {
+    height: 100px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+.story-header h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    margin: 10px 0;
+    color: #7b0f17;
+}
+.story-header p {
+    font-size: 16px;
+    font-style: italic;
+    color: #7b0f17;
+}
+
+/* Story Cards */
+.story-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.story-card {
+    background: #fff;
+    border: 2px solid #7b0f17;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.story-card h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #7b0f17;
+}
+.story-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===================== */
+/*   RESPONSIVE DESIGN   */
+/* ===================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .story-header h2 {
+        font-size: 40px;
+    }
+}
+
+/* HP */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    nav a {
+        margin: 5px 10px;
+        font-size: 12px;
+    }
+
+    .story-header img {
+        height: 70px;
+    }
+    .story-header h2 {
+        font-size: 30px;
+    }
+    .story-header p {
+        font-size: 14px;
+    }
+
+    .story-container {
+        grid-template-columns: 1fr; /* jadi 1 kolom */
+        gap: 15px;
+    }
+    .story-card {
+        width: 100%;
+    }
+}
