@@ -240,3 +240,89 @@ footer {
     z-index: 3;
 }
 
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+    .logo h1 {
+        font-size: 32px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        max-width: 95%;
+    }
+    .search-left, .search-right {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .side-img img {
+        width: 90%;
+        max-width: 250px;
+    }
+    .content h2 {
+        font-size: 28px;
+    }
+    .content p {
+        font-size: 13px;
+    }
+    .btn {
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+
+    .perjalanan h2 {
+        font-size: 28px;
+    }
+    .timeline {
+        height: auto;
+    }
+    .event p {
+        font-size: 12px;
+    }
+
+    .hi-baby {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    .hi-text {
+        width: 100%;
+    }
+    .hi-text h2 {
+        font-size: 36px;
+    }
+    .hi-text h3 {
+        font-size: 20px;
+    }
+
+    .hi-images {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .hi-images img {
+        position: static;
+        width: 30%;
+        transform: rotate(0);
+    }
+}
+
+
+
