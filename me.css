@@ -1,0 +1,59 @@
+/* Konten halaman ME */
+.me-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+/* Efek scrapbook untuk foto */
+.me-section img {
+    width: 260px;
+    height: auto;
+    border: 6px solid #fff;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    border-radius: 0; /* kotak */
+    transform: rotate(-3deg); /* sedikit miring */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek selotip di atas foto */
+.me-section img::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 80px;
+    height: 25px;
+    background: rgba(255, 255, 200, 0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Hover lurusin dan zoom */
+.me-section img:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    z-index: 2;
+}
+
+.me-text {
+    max-width: 500px;
+}
+
+.me-text h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #7b0f17;
+    margin-bottom: 10px;
+}
+
+.me-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
